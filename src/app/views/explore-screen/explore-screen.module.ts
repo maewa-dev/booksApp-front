@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
 import { IonicModule } from '@ionic/angular';
-import { LibraryScreenPageRoutingModule } from './library-screen-routing.module';
-import { LibraryScreenPage } from './library-screen.page';
+
+import { ExploreScreenPageRoutingModule } from './explore-screen-routing.module';
+
+import { ExploreScreenPage } from './explore-screen.page';
 import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
@@ -11,9 +14,9 @@ import { ComponentsModule } from '../../components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    LibraryScreenPageRoutingModule,
+    ExploreScreenPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [LibraryScreenPage]
+  declarations: [ExploreScreenPage]
 })
-export class LibraryScreenPageModule {}
+export class ExploreScreenPageModule {}

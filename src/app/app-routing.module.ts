@@ -14,6 +14,10 @@ const routes: Routes = [
         (m) => m.LibraryScreenPageModule
       ),
   },
+  {
+    path: 'explore-screen',
+    loadChildren: () => import('./views/explore-screen/explore-screen.module').then( m => m.ExploreScreenPageModule)
+  },
 ];
 
 @NgModule({

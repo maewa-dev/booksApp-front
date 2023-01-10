@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { IBook, BookService } from '../../services/book.service';
+import { BookService, IBook } from 'src/app/services/book.service';
 
 @Component({
-  selector: 'app-library-screen',
-  templateUrl: './library-screen.page.html',
-  styleUrls: ['./library-screen.page.scss'],
+  selector: 'app-explore-screen',
+  templateUrl: './explore-screen.page.html',
+  styleUrls: ['./explore-screen.page.scss'],
 })
-export class LibraryScreenPage implements OnInit {
+export class ExploreScreenPage implements OnInit {
+
 
   myLibrary : IBook[];
 
