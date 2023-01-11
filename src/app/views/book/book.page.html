@@ -1,0 +1,29 @@
+
+<ion-segment value="info" mode="ios" (ionChange)="segmentChanged($event)">
+  <ion-segment-button value="info">
+    <ion-label>Información</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="notes">
+    <ion-label>Notas</ion-label>
+  </ion-segment-button>
+</ion-segment>
+
+
+<ng-container [ngSwitch]="segment">
+  
+  <!-- info -->
+  <div *ngSwitchCase="'info'">
+    <ng-container *ngIf="book" >
+      <app-book-info [book]="book"></app-book-info>
+    </ng-container>
+  </div>
+ 
+ <!-- notas -->
+  <div *ngSwitchCase="'notes'" >
+    <ng-container *ngIf="book" >
+    notes
+   </ng-container>
+
+  </div>
+
+</ng-container>

@@ -1,9 +1,33 @@
-<ion-item button="true">
-  <ion-avatar slot="start">
-    <img [alt]="book.title" [src]="book.cover" />
-  </ion-avatar>
-    <ion-label>
-      <h2>{{book.title}}</h2>
-      <p>{{book.author}}</p>
-    </ion-label>
-</ion-item>
+<ng-container *ngIf="book">
+  <ion-item button="true" routerLink="/book/{{book.id}}">
+    <!-- todo_mrt cambiar cuadrado por rectangulo para la portada -->
+    <ion-thumbnail slot="start">
+      <img [alt]="book.title" [src]="book.cover" />
+    </ion-thumbnail>
+      <ion-label>
+        <h2>{{book.title}}</h2>
+        <p>{{book.author}}</p>
+      </ion-label>
+  </ion-item>
+</ng-container>
+
+
+
+  
+<ng-container *ngIf="!book">
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text [animated]="true"></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text [animated]="true" style="width: 80%;"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ng-container>

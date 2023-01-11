@@ -1,8 +1,7 @@
 Explore 
-
 <ion-grid>
     <ion-row>
-        <ion-col size="12" sizeMd="3" sizeXl="2" *ngFor="let book of myLibrary">
+        <ion-col size="6" sizeMd="3" sizeXl="2" *ngFor="let book of myLibrary">
             <app-book-card [book]="book"></app-book-card>
         </ion-col>
     </ion-row>

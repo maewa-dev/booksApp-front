@@ -1,0 +1,15 @@
+- Al usar titulos o autores con nombres muy largos no se ve bien
+    (book-info)
+
+- Cambiar el cuadrado por un rectangulo para que la portada se vea mejor 
+    (book-item)
+
+- Ajustar tamaño de las cartas
+    (explore-screen)
+
+- pantalla de notas de los libros
+    (book-page)
+
+
+- Al ver el libro en pantalla completa, pc, ajustar tamaño de la imagen y que se vea la sinopsis al lado de la portada
+    (book-info)

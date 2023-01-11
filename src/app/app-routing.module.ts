@@ -18,6 +18,10 @@ const routes: Routes = [
     path: 'explore-screen',
     loadChildren: () => import('./views/explore-screen/explore-screen.module').then( m => m.ExploreScreenPageModule)
   },
+  {
+    path: 'book/:id',
+    loadChildren: () => import('./views/book/book.module').then( m => m.BookPageModule)
+  },
 ];
 
 @NgModule({
