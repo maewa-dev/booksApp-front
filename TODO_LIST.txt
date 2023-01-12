@@ -10,6 +10,15 @@
 - pantalla de notas de los libros
     (book-page)
 
-
 - Al ver el libro en pantalla completa, pc, ajustar tamaño de la imagen y que se vea la sinopsis al lado de la portada
     (book-info)
+
+
+
+
+Añadido firebase
+    - Pantallas listas 
+        · biblioteca
+    
+    - Pendientes
+        · explore

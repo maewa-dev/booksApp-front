@@ -19,7 +19,7 @@ export class BookPage implements OnInit {
     private books : BookService,
     private route : ActivatedRoute
   ) {
-    this.library = this.books.library;
+    this.library = this.books.libraryFake;
     this.route.params.subscribe(param => {
       const {id} = param;
       this.bookId = Number(id);

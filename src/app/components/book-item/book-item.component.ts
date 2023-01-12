@@ -12,6 +12,8 @@ export class BookItemComponent implements OnInit {
 
   @Input() book : IBook;
   
-  ngOnInit() { }
+  ngOnInit() { 
+    console.log('que es ', this.book)
+  }
 
 }

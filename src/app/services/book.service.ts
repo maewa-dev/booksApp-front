@@ -1,4 +1,8 @@
 import { Injectable } from '@angular/core';
+import { initializeApp } from '@firebase/app';
+import { environment } from '../../environments/environment';
+import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { Observable } from 'rxjs';
 
 export interface IBook{
   id: number,
@@ -26,6 +30,34 @@ export interface IBook{
 })
 export class BookService {
 
+  books$ : Observable<any[]>;
+
+  constructor( private firestore: AngularFirestore ) {
+    //todo_mrt avisa cada vez que se cambie algo de la bbdd
+    this.books$ = firestore.collection('books').valueChanges();
+    
+    this.books$.subscribe(data => {
+      console.log('explota?', data)
+    });    
+
+    //agregar los 3 primeros libros a firebase
+    //seborra()
+  }
+
+ /*  todosloslibros:IBook[];
+  seBorra() {
+    this.todosloslibros = this.libraryFake;
+    for(let i =0; i<3; i++){
+      this.firestore.collection('books').doc(this.todosloslibros[i].isbn).set(this.todosloslibros[i]);
+    }
+  } */
+
+  //agregar a la coleccion libros con el isbn
+  //this.firestore.collection('books').doc(this.todosloslibros[i].isbn).set(this.todosloslibros[i]);
+
+  
+
+  //fake 
   private _myLibrary: IBook[] = [
     {
       id: 1,
@@ -65,6 +97,25 @@ export class BookService {
       cover: "https://m.media-amazon.com/images/I/61GY5CmupoL.jpg", //(img),
       saga: "Trono de cristal",
       volume: 1
+    },
+    {
+      id: 4,
+      //title: "El principito", 
+      title: "asd", 
+//      author: "Antoine Saint-Exupery",
+      author: "Necesito un nombre mas largo",
+      isbn: "9783140464080",
+      barcode:"123",
+      publish_date: "1943-04-06",
+      format_type: 'F',
+      cover: "https://m.media-amazon.com/images/I/71lyHAf7XXL.jpg", //(img)
+      start_date: "2019-01-01",
+      end_date: "2019-01-05",
+      score: 5, //1 - 5
+      notes: "gran libro",
+      saga:"2asd",
+      volume: 2,
+      synopsis: "habia una vez un barquito chiquitito habia una vez lalala"
     },
     {
       id: 4,
@@ -166,10 +217,9 @@ export class BookService {
       volume: 1
     }
   ];
-  
-  constructor() {}
 
-  get library():IBook[] {
+  
+  get libraryFake():IBook[] {
     return this._myLibrary;
   }
 

@@ -14,7 +14,7 @@ export class ExploreScreenPage implements OnInit {
   constructor( private books : BookService ) { }
 
   ngOnInit() {
-    this.myLibrary = this.books.library;
+    this.myLibrary = this.books.libraryFake;
     //console.log ('you are here' , this.myLibrary)
   }
 

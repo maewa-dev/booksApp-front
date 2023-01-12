@@ -13,8 +13,12 @@ export class LibraryScreenPage implements OnInit {
   constructor( private books : BookService ) { }
 
   ngOnInit() {
-    this.myLibrary = this.books.library;
-    //console.log ('you are here' , this.myLibrary)
+    //this.myLibrary = this.books.libraryFake;
+
+    //recuperar los libros de firebase
+    this.books.books$.subscribe(data => {
+      this.myLibrary=data
+    })
   }
 
 }
