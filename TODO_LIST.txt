@@ -1,9 +1,3 @@
-- Al usar titulos o autores con nombres muy largos no se ve bien
-    (book-info)
-
-- Cambiar el cuadrado por un rectangulo para que la portada se vea mejor 
-    (book-item)
-
 - Ajustar tamaño de las cartas
     (explore-screen)
 

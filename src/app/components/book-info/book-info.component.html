@@ -1,25 +1,21 @@
 <ion-grid>
   <!-- img -->
   <ion-row>
-    <ion-col size="6" class="flex ion-justify-content-center" style="max-width: 300px; max-height: 300px;">
+    <ion-col size="12">
+          <ion-card-title class="two-lines ion-text-center">{{book.title}}</ion-card-title>
+        </ion-col>
+        <ion-col size="12">
+      <ion-card-subtitle class="two-lines ion-text-center">{{book.author}}</ion-card-subtitle>
+    </ion-col>
+  </ion-row>
+  <ion-row style="padding-top: 1em;">
+    <ion-col size="6" class="flex ion-justify-content-center" style=" max-width: 300px; max-height: 300px;">
       <img [src]="book.cover">
     </ion-col>
     <!-- info -->
     <ion-col size="6">
-      <ion-list lines="false">
-        <ion-item>
-          <ion-label>
-            <h3>Título</h3>
-            <p>{{book.title}}</p>
-          </ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>
-            <h3>Autor</h3>
-            <p>{{book.author}}</p>
-          </ion-label>
-        </ion-item>
-        <ion-item>
+      <ion-list lines="false" style="padding-top: 0;">
+        <ion-item >
           <ion-label>
             <h3>ISBN</h3>
             <p>{{book.isbn}}</p>
@@ -27,30 +23,23 @@
         </ion-item>
         <ion-item>
           <ion-label>
-            <h3>Fecha de publicación</h3>
-            <p>{{book.publish_date}}</p>
+            <h3>Publicado</h3>
+            <p>{{book.publish_date | date: 'yyyy'}}</p>
+          </ion-label>
+        </ion-item>
+        <ion-item *ngIf="book.saga">
+          <ion-label>
+            <h3>Saga</h3>
+            <p>{{book.saga}}</p>
+          </ion-label>
+        </ion-item>
+        <ion-item *ngIf="book.saga && book.volume">
+          <ion-label>
+            <h3>Volumen</h3>
+            <p>{{book.volume}}</p>
           </ion-label>
         </ion-item>
       </ion-list>
-    </ion-col>
-  </ion-row>
-  <!-- saga y volume -->
-  <ion-row>
-    <ion-col>
-      <ion-item *ngIf="book.saga">
-        <ion-label>
-          <h3>Saga</h3>
-          <p>{{book.saga}}</p>
-        </ion-label>
-      </ion-item>
-    </ion-col>
-    <ion-col>
-      <ion-item *ngIf="book.saga && book.volume">
-        <ion-label>
-          <h3>Volumen</h3>
-          <p>{{book.volume}}</p>
-        </ion-label>
-      </ion-item>
     </ion-col>
   </ion-row>
   <!-- sinopsis -->
@@ -59,7 +48,7 @@
       <ion-item lines="none">
         <ion-label>
           <h3>Sinopsis</h3>
-          <p>{{book.synopsis}}</p>
+          <p class="sinopsis">{{book.synopsis}}</p>
         </ion-label>
       </ion-item>
     </ion-col>
