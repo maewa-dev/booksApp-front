@@ -6,6 +6,7 @@ import { BookItemComponent } from './book-item/book-item.component';
 import { RouterModule } from '@angular/router';
 import { BookInfoComponent } from './book-info/book-info.component';
 import { AddBookFormComponent } from './add-book-form/add-book-form.component';
+import { LoadingListComponent } from './loading-list/loading-list.component';
 
 
 
@@ -14,7 +15,8 @@ import { AddBookFormComponent } from './add-book-form/add-book-form.component';
     BookCardComponent,
     BookItemComponent,
     BookInfoComponent,
-    AddBookFormComponent
+    AddBookFormComponent,
+    LoadingListComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +27,8 @@ import { AddBookFormComponent } from './add-book-form/add-book-form.component';
     BookCardComponent,
     BookItemComponent,
     BookInfoComponent,
-    AddBookFormComponent
+    AddBookFormComponent,
+    LoadingListComponent
   ]
 })
 export class ComponentsModule { }
