@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AddBookFormComponent } from './components/add-book-form/add-book-form.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,9 @@ const routes: Routes = [
   {
     path: 'book/:id',
     loadChildren: () => import('./views/book/book.module').then( m => m.BookPageModule)
+  },
+  { path: 'add-book', 
+  component: AddBookFormComponent 
   },
 ];
 

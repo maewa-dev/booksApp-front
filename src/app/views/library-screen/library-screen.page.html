@@ -4,7 +4,7 @@ Contenido de la biblioteca
     <ion-list lines="false" *ngIf="myLibrary; else loadingLibrary">
         <app-book-item *ngFor="let book of myLibrary" [book]="book"></app-book-item>
     </ion-list>
-    <ion-fab vertical="bottom" horizontal="end">
+    <ion-fab vertical="bottom" horizontal="end" routerLink="/add-book">
         <ion-fab-button>
             <ion-icon name="add"></ion-icon>
         </ion-fab-button>

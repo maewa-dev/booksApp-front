@@ -7,7 +7,12 @@
 - Al ver el libro en pantalla completa, pc, ajustar tamaño de la imagen y que se vea la sinopsis al lado de la portada
     (book-info)
 
-
+- Añadir la lectura actual a la pagina de mi biblioteca. La lectura actual será aquella que tenga fecha de inicio pero no fecha de fin.
+    Objetivo:
+        · Facilitar el acceso a la lectura actual para actualizar el progreso (que no sea pesado buscar para actualizar)
+        · El progreso se pondrá con un ion-range basado en el numero de paginas, para actualizar el progreso de lectura basta con actualizar la pagina en la que te quedaste
+        · Una vez que el numero de paginas leidas sea igual que el numero de paginas total del libro se marcará como leído de forma automática y se añadirá la fecha de terminado
+        · Se eliminara este libro de "lectura actua"
 
 
 Añadido firebase

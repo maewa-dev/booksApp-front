@@ -1,12 +1,19 @@
 <ng-container *ngIf="book">
   <ion-item button="true" routerLink="/book/{{book.id}}">
     <!-- todo_mrt cambiar cuadrado por rectangulo para la portada -->
-    <ion-thumbnail slot="start">
-      <img [alt]="book.title" [src]="book.cover" />
-    </ion-thumbnail>
+    <div>
+
+      <ion-thumbnail slot="start">
+        <img [alt]="book.title" [src]="book.cover" />
+      </ion-thumbnail>
+      <ion-progress-bar value="1"></ion-progress-bar>
+      <!-- todo_mrt progreso de lectura  añadir valor de la página del libro-->
+    </div>
+    <div style="padding-left: 10px; ">
       <ion-label>
         <h2>{{book.title}}</h2>
         <p>{{book.author}}</p>
       </ion-label>
+    </div>
   </ion-item>
 </ng-container>
