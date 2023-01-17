@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { BookInfoComponent } from './book-info/book-info.component';
 import { AddBookFormComponent } from './add-book-form/add-book-form.component';
 import { LoadingListComponent } from './loading-list/loading-list.component';
+import { BookNotesComponent } from './book-notes/book-notes.component';
 
 
 
@@ -16,7 +17,8 @@ import { LoadingListComponent } from './loading-list/loading-list.component';
     BookItemComponent,
     BookInfoComponent,
     AddBookFormComponent,
-    LoadingListComponent
+    LoadingListComponent,
+    BookNotesComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +30,8 @@ import { LoadingListComponent } from './loading-list/loading-list.component';
     BookItemComponent,
     BookInfoComponent,
     AddBookFormComponent,
-    LoadingListComponent
+    LoadingListComponent,
+    BookNotesComponent
   ]
 })
 export class ComponentsModule { }

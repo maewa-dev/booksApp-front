@@ -21,7 +21,7 @@
  <!-- notas -->
   <div *ngSwitchCase="'notes'" >
     <ng-container *ngIf="book" >
-    notes
+      <app-book-notes [book]="book"></app-book-notes>
    </ng-container>
 
   </div>
