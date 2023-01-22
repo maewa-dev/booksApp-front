@@ -17,13 +17,14 @@ En la pantalla de explorar, los libros que ya están en la biblioteca marcarlos 
     <ion-icon name="library-outline"></ion-icon>
 
 
+__________________________________________________________
 
+Añadido firebase en la pantallas:
+    mi biblioteca
+    info del libro
+    notas del libros
 
+Sincronizar fecha de finalizado con leido (checkbox)
 
+Mostrar calificación con estrellas
 
-Añadido firebase
-    - Pantallas listas 
-        · biblioteca
-    
-    - Pendientes
-        · explore

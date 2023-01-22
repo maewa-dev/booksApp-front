@@ -8,6 +8,7 @@ import { BookInfoComponent } from './book-info/book-info.component';
 import { AddBookFormComponent } from './add-book-form/add-book-form.component';
 import { LoadingListComponent } from './loading-list/loading-list.component';
 import { BookNotesComponent } from './book-notes/book-notes.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -23,7 +24,9 @@ import { BookNotesComponent } from './book-notes/book-notes.component';
   imports: [
     CommonModule,
     IonicModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule
     ],
   exports: [
     BookCardComponent,
